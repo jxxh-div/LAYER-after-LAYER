@@ -10,17 +10,17 @@ function scrolling(obj){
 let banner_conut = 2000;
 let banner_speed = 20000;
 
+let bannerLeft=0;
+let first=1;
+let last;
+let imgCnt=0;
 
 
 $(document).ready(function() {
-    let bannerLeft=0;
-    let first=1;
-    let last;
-    let imgCnt=0;
+
     let $img = $("#banner_in div");
     let $first;
     let $last;
-
 
     $("ul li a").click(function(){  // 네비게이션 클릭시
         var direction = $(this).attr("href");   // direction = 클릭한 요소의 href 속성
@@ -28,35 +28,37 @@ $(document).ready(function() {
         return false;   // 본래 이벤트 방지
     });
 
+
+
     $img.each(function(){ // 5px 간격으로 배너 처음 위치 시킴
         $(this).css("left",bannerLeft);
         bannerLeft += 350
         $(this).attr("id", "banner"+(++imgCnt)); // img에 id 속성 추가
     });
 
-    if( imgCnt > 5){                //배너 5개 이상이면 이동시킴
+    if( imgCnt > 6){                //배너 6개 이상이면 이동시킴
         last = imgCnt;
 
         setInterval(() => {
-
             $img.each(function(){
-                $(this).css("left", $(this).position().left+10); // 1px씩 왼쪽으로 이동
+                $(this).css("left", $(this).position().left+1); // 1px씩 왼쪽으로 이동
             });
-            $first = $("#banner"+first);
-            $last = $("#banner"+last);
+            $first = $("#banner"+first);//1
+            $last = $("#banner"+last);//6
             
-            // console.log($first.position().left)
-            if($first.position().left > 1300) {   // 제일 앞에 배너 제일 뒤로 옮김
-                $first.css("left", 0);
-
+            if($last.position().left > 2100) { 
+                $last.css("left", -350);
+                last--;
                 first++;
-                last++;
-                if(last > imgCnt) { last=1; }   
-                if(first > imgCnt) { first=1; }
-                // console.log(first)
-                // console.log(last)
+
+                if(last < 2){last = 6}
+                if(first > 5){first = 1}
+                console.log($last)
+                console.log($first)
             }
-        },50);
+
+            // }
+        });
 
     }
     
