@@ -61,7 +61,6 @@ $(document).ready(function() {
         });
 
     }
-    
     $('#overlay').click(function() {
         $('#overlay').fadeOut(300);
     });
@@ -69,8 +68,15 @@ $(document).ready(function() {
     $('#close').click(function() {
         $('#overlay').fadeOut(300);
     });
+
+    menu_event();
 });
 
 function box(item){
     $('#overlay').fadeIn(300); 
+};
+let menu_event = function(){
+    $('#main_menu li a').click(function(){
+        $('#listStyle').css("display","block");
+    })
 };
