@@ -50,15 +50,28 @@
             <div id="main">
                 <img id="main_logo" src="./img/L_L_logo.svg" />
                 <ul id="main_menu">
-                    <li><div id="listStyle"></div><a href="#about">About</a></li>
-                    <li><div></div><a href="#artists">Artists with us</a></li>
-                    <li><div></div><a href="#contact">contact</a></li>
+                    <li>
+                        <div class="listStyle" id="listStyle"></div>
+                        <div>
+                            <a class="listStyle" href="#about">About</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="listStyle" id="listStyle"></div>
+                        <a class="listStyle" href="#artists">Artists with us</a>
+                    </li>
+                    <li>
+                        <div class="listStyle" id="listStyle"></div>
+                        <a class="listStyle" href="#contact">contact</a>
+                    </li>
                 </ul>
                 <img id="main_sticker" src="./img/sticker.svg" />
             </div>
-        </section>
+
+        </section><!-- top -->
+
         <section class="body">
-            <div id="about">
+            <div id="about_text">
                 <h1>
                     LAYER after LAYER 는<br>
                     크리에이터들과 함께하는<br>
@@ -76,44 +89,38 @@
                     (홍대입구역 7번 출구 10분 거리 경의선 숲길가 공간)<br>
                 </p>
             </div>
-            <div id="map">
-                <div id="map_img">
-                    <img src="./img/map.png" />
-                </div>
-                <div id="map_ex">
-                    <img id="map_icon" src="" />
-                    <p id="map_text">서울특별시 마포구 와우산로32길 38-7</p>
-                </div>
-            </div>
-            <div id="about_icon">
 
-            </div>
-            <div id="about_message">
-                <p>이미지를 클릭하면 작가 상세페이지 확인이 가능합니다.</p>
-            </div>
-            <div id="artists">
-                <div class="wrapper">
-                    <div class="box a" onclick="box('a')"></div>
-                    <div class="box b" onclick="box('b')"></div>
-                    <div class="box c" onclick="box('c')"></div>
-                    <div class="box d" onclick="box('d')"></div>
-                    <div class="box e" onclick="box('e')"></div>
-                    <div class="box f" onclick="box('f')"></div>
+            <div id="about_popup">
+                <div id="about_message">
+                    <img src="./img/head_icon.png" />
+                    <p>이미지를 클릭하면 작가 상세페이지 확인이 가능합니다.</p>
+                </div>
+                <div id="artists">
+                    <div class="wrapper">
+                        <div class="box a" onclick="box('a')"></div>
+                        <div class="box b" onclick="box('b')"></div>
+                        <div class="box c" onclick="box('c')"></div>
+                        <div class="box d" onclick="box('d')"></div>
+                        <div class="box e" onclick="box('e')"></div>
+                        <div class="box f" onclick="box('f')"></div>
+                    </div>
+                </div>
+                
+                <div id="overlay" > <!--팝업창.-->
+                    <div id="popup">
+                    <div id="close">X</div>
+                    </div>
+                </div>
+                <div id="contact">
+                    contact
                 </div>
             </div>
-            <div id="overlay" >
-                <div id="popup">
-                   <div id="close">X</div>
-                </div>
-             </div>
-            <div id="contact">
-                contact
-            </div>
-        </section>
+        </section><!--body-->
+
 
         <section class="bottom">
             <div id="contact">
-                <img id="contact_img1" src="./img/contact1.png" />
+                <img id="contact_img1" src="./img/head_icon.png" />
                 <img id="contact_img2" src="./img/contact2.png" />
                 <p>
                     copyright © 2020 layer after layer all rights reservedㄷe-mail (24hour) dkbeam1@gmail.com

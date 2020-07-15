@@ -41,7 +41,7 @@ $(document).ready(function() {
 
         setInterval(() => {
             $img.each(function(){
-                $(this).css("left", $(this).position().left+1); // 1px씩 왼쪽으로 이동
+                $(this).css("left", $(this).position().left+0.5); // 1px씩 왼쪽으로 이동
             });
             $first = $("#banner"+first);//1
             $last = $("#banner"+last);//6
@@ -61,7 +61,6 @@ $(document).ready(function() {
         });
 
     }
-    
     $('#overlay').click(function() {
         $('#overlay').fadeOut(300);
     });
@@ -69,8 +68,15 @@ $(document).ready(function() {
     $('#close').click(function() {
         $('#overlay').fadeOut(300);
     });
+
+    menu_event();
 });
 
 function box(item){
     $('#overlay').fadeIn(300); 
+};
+let menu_event = function(){
+    $('#main_menu li a').click(function(){
+        $('#listStyle').css("display","block");
+    })
 };

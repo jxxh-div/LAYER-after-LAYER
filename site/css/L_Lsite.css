@@ -13,7 +13,7 @@ body{
     position: relative;
     float: left;
     width: 100%;
-    height: 620px;
+    height: 400px;
 }
 #banner{
     top:0px;
@@ -57,22 +57,27 @@ body{
     width: 100%;
     clear: both;
     float: left;
-    margin-top: 60px;
+    text-align: right;
+    margin-top: 90px;
 }
 #main_logo{
     float: left;
-    margin-left: 5%;
+    margin-left: 6%;
+    /* .body랑 같음. */
     width: 180px;
+    
 }
 #main_menu{
+    position: relative;
     float: left;
+    width: 300px;
     margin-top:0px;
-    /* margin-left: 60px; */
-    text-align: right;
+    margin-left: 60px;
 }
 #main_menu li{
+    float: right;
+    clear: both;
     list-style-type: none;
-    margin-bottom: 10px;
     font-size:33px;
 }
 /* visited */
@@ -88,6 +93,12 @@ body{
     height: 12px;
     background-color: blue;
     border-radius: 50px;
+    margin-right: 12px;
+    margin-top: 13px;
+    display: none;
+}
+.listStyle{
+    float: left;
 }
 
 #main_sticker{
@@ -96,20 +107,22 @@ body{
     margin-right: 8%;
     margin-top: 80px;
 }
-/* about */
-#about{
-    float: left;
-    clear: both;
-    /* margin-left: 80px; */
-}
+
 /* body */
 .body{
     float: left;
     clear: both;
     width: 100%;
     height: auto;
-    background-color: cornsilk;
+    margin-left: 6%;
 }
+/* about */
+#about{
+    float: left;
+    clear: both;
+    /* margin-left: 80px; */
+}
+
 /* popup */
  .wrapper {
     display: grid;
@@ -120,7 +133,17 @@ body{
     color: #444;
     height : 470px
 }
-
+#about_popup{
+    text-align: center;
+}
+#about_message{
+    float: left;
+    clear: both;
+}
+#artists{
+    float: left;
+    clear: both;
+}
 .box {
     background-color: #444;
     color: #fff;
@@ -159,6 +182,8 @@ body{
     color: #000;
  }
 
+
+ 
 /* bottom */
 .bottom{
     float: left;
