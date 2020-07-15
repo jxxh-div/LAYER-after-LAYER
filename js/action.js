@@ -56,8 +56,6 @@ $(document).ready(function() {
                 console.log($last)
                 console.log($first)
             }
-
-            // }
         });
 
     }
@@ -74,6 +72,11 @@ $(document).ready(function() {
 
 function box(item){
     $('#overlay').fadeIn(300); 
+    if(item === 1){
+        console.log("item1")
+    }else if(item === 2){  
+        console.log("item2")
+    }
 };
 let menu_event = function(){
     $('#main_menu li a').click(function(){

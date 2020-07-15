@@ -113,9 +113,8 @@ body{
     float: left;
     clear: both;
     height: auto;
-    width: 60%;
-    overflow: hidden;
-    margin-left: 6%;
+    width: 100%;
+    /* overflow: hidden; */
 }
 /* about */
 #about{
@@ -126,6 +125,7 @@ body{
 #about_text{
     float: left;
     clear: both;
+    margin-left: 6%;
 }
 /* popup */
 .about_popup{
@@ -134,7 +134,7 @@ body{
 #about_popup{
     float: left;
     clear: both;
-    margin: 15% 0 0 50%;
+    margin: 15% 0 0 0;
 }
 #about_message{
     float: left;
@@ -146,12 +146,15 @@ body{
 }
 .wrapper {
     display: grid;
-    grid-template-columns: 150px 150px;
-    grid-template-rows: 150px 150px;
-    grid-gap: 10px;
+    
+    grid-template-columns: 380px 380px 380px;
+    /* 옵션하나당 박스하나. */
+    grid-template-rows: 380px;
+    /* 옵션하나당 한줄 */
+    grid-gap: 57px;
     background-color: #fff;
     color: #444;
-    height : 470px
+    height: auto;
 }
 .box {
     background-color: #444;
@@ -221,5 +224,13 @@ body{
     }
     #main_sticker{
         width: 140px;
+    }
+
+
+    .wrapper {
+        grid-template-columns: 200px;
+        /* 옵션하나당 박스하나. */
+        grid-template-rows: 200px;
+        grid-gap: 57px;
     }
 }
