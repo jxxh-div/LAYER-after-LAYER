@@ -67,7 +67,7 @@ $(document).ready(function() {
         $('#overlay').fadeOut(300);
     });
 
-    menu_event();
+    // menu_event();
 });
 
 function box(item){
@@ -78,8 +78,8 @@ function box(item){
         console.log("item2")
     }
 };
-let menu_event = function(){
-    $('#main_menu li a').click(function(){
-        $('#listStyle').css("display","block");
-    })
-};
+// let menu_event = function(){
+//     $('#main_menu li a').click(function(){
+//         $('#listStyle').css("display","block");
+//     })
+// };

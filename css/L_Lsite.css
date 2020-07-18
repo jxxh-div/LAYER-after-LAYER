@@ -70,7 +70,6 @@ body{
 #main_menu{
     position: relative;
     float: left;
-    width: 300px;
     margin-top:0px;
     margin-left: 60px;
 }
@@ -102,7 +101,7 @@ body{
 }
 
 #main_sticker{
-    width: 280px;
+    width: 250px;
     float: right;
     margin-right: 8%;
     margin-top: 80px;
@@ -114,7 +113,7 @@ body{
     clear: both;
     height: auto;
     width: 100%;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 /* about */
 #about{
@@ -134,34 +133,34 @@ body{
 #about_popup{
     float: left;
     clear: both;
-    margin: 15% 0 0 0;
+    margin-top:15%;
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
 }
 #about_message{
-    float: left;
-    clear: both;
+    display: inline-block;
+    height: 200px;
+}
+#artist_icon{
+    width: 40%;
 }
 #artists{
-    float: left;
-    clear: both;
+    margin-left:10%;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 .wrapper {
     display: grid;
-    
-    grid-template-columns: 380px 380px 380px;
-    /* 옵션하나당 박스하나. */
-    grid-template-rows: 380px;
-    /* 옵션하나당 한줄 */
-    grid-gap: 57px;
-    background-color: #fff;
-    color: #444;
-    height: auto;
+    grid-gap: 50px;
+    grid-template-columns:  repeat(3,1fr);
+    grid-template-rows: repeat(2, 350px);
+    width: 80%;
+
 }
 .box {
     background-color: #444;
-    color: #fff;
-    border-radius: 0px;
-    padding: 20px;
-    font-size: 150%;
 }
 #overlay {
     position: fixed;
@@ -200,24 +199,34 @@ body{
 .bottom{
     float: left;
     clear: both;
-    height: auto;
+    width: 100%;
+    text-align: center;
 }
 #contact{
-    margin-top: 10px;
-    float: left;
-    clear: both;
+    margin-top:10%;
+    display: inline-block;
     width: 100%;
-    height: 100px;
-    background-color: cornsilk;
+    height: auto;
+}
+#contact img{
+    width: 15%;
 }
 
 /* mobile */
-@media only screen and (max-width : 400px){
-    .top{
+@media only screen and (max-width : 450px){
+    /* .top{
         position: absolute;
     }
+    #banner{
+        position:fixed;
+    } */
     #main_logo{
         width: 100px;
+    }
+    #main_menu{
+        float: right;
+        margin-left: 0;
+        margin-right: 10%;
     }
     #main_menu li{
         font-size:20px;
@@ -225,12 +234,31 @@ body{
     #main_sticker{
         width: 140px;
     }
-
-
+    #artists{
+        margin: 0;
+    }
+    /* artist */
+    #artist_icon{
+        width: 30%;
+    }
     .wrapper {
-        grid-template-columns: 200px;
+        display: grid;
+        width: 100%;
+        grid-template-columns:  repeat(3,1fr);
         /* 옵션하나당 박스하나. */
-        grid-template-rows: 200px;
-        grid-gap: 57px;
+        grid-template-rows: repeat(2, 110px);
+        /* 박스 길이*/
+        grid-gap: 5px;
+    }
+}
+
+@media only screen and (max-width : 1024px){
+    .wrapper {
+        display: grid;
+        grid-template-columns:  repeat(3,1fr);
+        /* 옵션하나당 박스하나. */
+        grid-template-rows: repeat(2, 200px);
+        /* 박스 길이*/
+        grid-gap: 5px;
     }
 }
