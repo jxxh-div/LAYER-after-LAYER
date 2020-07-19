@@ -6,23 +6,7 @@ let bannerLeft=0;
 let first=1;
 let last;
 let imgCnt=0;
-
-// <div id="popup_contents">
-    //     <div id="popup_left"></div>
-    //     <div id="popup_main"></div>
-    //     <div id="popup_aside"></div>
-    //     <div id="popup_right"></div>
-    // </div>
-    // <div id="popup_info">
-    //     <h3>artistName</h1>
-    //     <img src="./img/instagram.png" alt="instargam tag" />
-    //     <img src="img/twitter.png" alt="twitter tag" />
-    // </div>
-    // <div id="popup_contact">
-    //     <h4>contact</h4>
-    //     <p>dkbeam@naver.com</p>
-    // </div>
-
+//0 left, 1 main, 2 aside, 3right, 4name, 5contact
 
 
 $(document).ready(function() {
@@ -64,32 +48,6 @@ $(document).ready(function() {
             }
         });
     }
-
-
-    $('#overlay').click(function() {
-        $('#overlay').fadeOut(300);
-    });
-
-    $('#close').click(function() {
-        $('#overlay').fadeOut(300);
-    });
-
-    $.getJSON('../LAL.json', function(data){
-        let html = [];
-        $.each(data, function(i, item) {
-            // html.push('<div class="popup_contents">');
-                html.push('<div id="popup_contents">');
-                    html.push('<div >' + item.artist[0].left + '</div>');
-                    html.push('<div >' + item.lastName[0].main + '</div>');
-                    html.push('<div >' + item.lastName[0].aside + '</div>');
-                    html.push('<div >' + item.lastName[0].right+ '</div>');
-                html.push('</div>'); html.push('</div>');
-            // html.push('</div>'); html.push('</div>');
-       });
-    });
-
-    $('#artistJson').html(html.join(''));
-    // menu_event();
 });
 
 function scrolling(obj){
@@ -100,17 +58,3 @@ function scrolling(obj){
         $('html, body').animate({scrollTop:posTop}, speed ) // body의 스크롤이동 : posTop
     }
 };
-
-function box(item){
-    $('#overlay').fadeIn(300); 
-    if(item === 1){
-        console.log("item1")
-    }else if(item === 2){  
-        console.log("item2")
-    }
-};
-// let menu_event = function(){
-//     $('#main_menu li a').click(function(){
-//         $('#listStyle').css("display","block");
-//     })
-// };
