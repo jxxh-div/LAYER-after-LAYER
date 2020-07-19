@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="css/L_Lsite.css" rel="stylesheet">
-    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/action.js"></script>
     
   </head>
@@ -18,31 +18,31 @@
             <div id="banner">
                 <div id="banner_in">
                     <div>
-                        <img id="banner_icon" src="./img/banner_icon.svg" />
+                        <img id="banner_icon" src="./img/d.png" />
                         <img id="banner_text" src="./img/banner_text.svg" />
                     </div>
                     <div>
-                        <img id="banner_icon" src="./img/banner_icon.svg" />
+                        <img id="banner_icon" src="./img/x.png" />
                         <img id="banner_text" src="./img/banner_text.svg" />
                     </div>
                     <div>
-                        <img id="banner_icon" src="./img/banner_icon.svg" />
+                        <img id="banner_icon" src="./img/d.png" />
                         <img id="banner_text" src="./img/banner_text.svg" />
                     </div>
                     <div>
-                        <img id="banner_icon" src="./img/banner_icon.svg" />
+                        <img id="banner_icon" src="./img/x.png" />
                         <img id="banner_text" src="./img/banner_text.svg" />
                     </div>
                     <div>
-                        <img id="banner_icon" src="./img/banner_icon.svg" />
+                        <img id="banner_icon" src="./img/d.png" />
                         <img id="banner_text" src="./img/banner_text.svg" />
                     </div>
                     <div>
-                        <img id="banner_icon" src="./img/banner_icon.svg" />
+                        <img id="banner_icon" src="./img/x.png" />
                         <img id="banner_text" src="./img/banner_text.svg" />
                     </div>
                     <div>
-                        <img id="banner_icon" src="./img/banner_icon.svg" />
+                        <img id="banner_icon" src="./img/d.png" />
                         <img id="banner_text" src="./img/banner_text.svg" />
                     </div>
                 </div>
@@ -97,8 +97,11 @@
                         <img id="artist_icon" src="./img/head_icon.png" />
                         <p>이미지를 클릭하면 작가 상세페이지 확인이 가능합니다.</p>
                     </div>
+
                     <div id="artists">
                         <div class="wrapper">
+                            <script>
+                            </script>
                             <div class="box a" onclick="box(1)"></div>
                             <div class="box b" onclick="box(2)"></div>
                             <div class="box c" onclick="box(3)"></div>
@@ -108,9 +111,24 @@
                         </div>
                     </div>
                     
-                    <div id="overlay" > <!--팝업창.-->
+                    <div id="overlay"> <!--팝업창.-->
                         <div id="popup">
-                        <div id="close">X</div>
+                            <div id="popup_logo" >
+                                <img src="img/artist_logo.svg">
+                            </div>
+                            <!-- 반복돌리기 -->
+                            <div class="popup_contents">
+                                <div id="artistJson"></div>
+                                <div id="popup_info">
+                                    <h3>artistName</h1>
+                                    <img src="./img/instagram.png" alt="instargam tag" />
+                                    <img src="img/twitter.png" alt="twitter tag" />
+                                </div>
+                                <div id="popup_contact">
+                                    <h4>contact</h4>
+                                    <p>dkbeam@naver.com</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

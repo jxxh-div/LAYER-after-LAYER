@@ -1,12 +1,20 @@
 [
     {
-      "main_img": "",
       "artist": [
         {
-          "img1": "",
-          "img2": "",
-          "img3": "",
-          "name": "",
+          "left": "./img/artist/The71_left.png",
+          "main": "./img/artist/The71_main.png",
+          "aside": "./img/artist/The71_aside.png",
+          "right": "./img/artist/The71_right.png",
+          "name": "The71",
+          "contact":"dkbeam@naver.com"
+        },
+        {
+          "main": "",
+          "sub1": "",
+          "sub2": "",
+          "sub3": "",
+          "name": "ToGGi",
           "contact":""
         }
       ]

@@ -47,10 +47,12 @@ body{
 }
 #banner_icon{
     position: absolute;
+    width: 25px;
+    top:2px;
 }
 #banner_text{
     position: absolute;
-    left:55px;
+    left:45px;
 }
 /* main */
 #main{
@@ -175,7 +177,7 @@ body{
     z-index: 10;
  }
 #popup {
-    max-width: 600px;
+    max-width: 700px;
     width: 80%;
     max-height: 500px;
     height: 80%; 
@@ -185,13 +187,31 @@ body{
     margin: 0 auto;
     margin-top: 10%;
  }
-#close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    color: #000;
- }
+#popup_contents{
+    display: grid;
+        display: grid;
+        grid-template-rows: repeat(3, 100px);
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:25px;
+        grid-template-areas:
+          "left main right"
+          "left main right"
+          "left aside right";
+        }
+#popup_left { grid-area: left; }
+#popup_main   { grid-area: main;   }
+#popup_aside  { grid-area: aside;  }
+#popup_right { grid-area: right; }
+
+#popup_contents div{
+    background-color: bisque;
+}
+#popup_info{
+float: left;
+}
+#popup_contact{
+float: left;
+}
 
 
  
@@ -213,7 +233,7 @@ body{
 }
 
 /* mobile */
-@media only screen and (max-width : 450px){
+@media (min-width: 280px) and (max-width: 480px) {
     /* .top{
         position: absolute;
     }
@@ -241,6 +261,7 @@ body{
     #artist_icon{
         width: 30%;
     }
+    /* grid */
     .wrapper {
         display: grid;
         width: 100%;
@@ -250,15 +271,27 @@ body{
         /* 박스 길이*/
         grid-gap: 5px;
     }
+    #popup_contents{
+        display: grid;
+            display: grid;
+            grid-template-rows: repeat(3, 100px);
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap:25px;
+            grid-template-areas:
+              "left left"
+              "main right"
+              "aside right";
+            }
 }
 
-@media only screen and (max-width : 1024px){
+/* Tablets */
+@media (min-width: 600px) and (max-width: 1024px) {
     .wrapper {
         display: grid;
         grid-template-columns:  repeat(3,1fr);
         /* 옵션하나당 박스하나. */
         grid-template-rows: repeat(2, 200px);
         /* 박스 길이*/
-        grid-gap: 5px;
+        grid-gap: 25px;
     }
 }

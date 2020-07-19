@@ -1,12 +1,4 @@
 var speed = 700;    // 스크롤 스피드 수치로 사용할 변수    
-function scrolling(obj){
-    if (!obj){  // 예외처리, 현재는 기능적으로 필요한 부분은 아님, 관례적 사용
-        $('html, body').animate({scrollTop:0},speed);
-    }else{
-        var posTop = $(obj).offset().top;   // posTop = 매개변수로 들어온 컨텐츠 obj 의 offset().top - 네비게이션 높이
-        $('html, body').animate({scrollTop:posTop}, speed ) // body의 스크롤이동 : posTop
-    }
-};
 let banner_conut = 2000;
 let banner_speed = 20000;
 
@@ -15,9 +7,25 @@ let first=1;
 let last;
 let imgCnt=0;
 
+// <div id="popup_contents">
+    //     <div id="popup_left"></div>
+    //     <div id="popup_main"></div>
+    //     <div id="popup_aside"></div>
+    //     <div id="popup_right"></div>
+    // </div>
+    // <div id="popup_info">
+    //     <h3>artistName</h1>
+    //     <img src="./img/instagram.png" alt="instargam tag" />
+    //     <img src="img/twitter.png" alt="twitter tag" />
+    // </div>
+    // <div id="popup_contact">
+    //     <h4>contact</h4>
+    //     <p>dkbeam@naver.com</p>
+    // </div>
+
+
 
 $(document).ready(function() {
-
     let $img = $("#banner_in div");
     let $first;
     let $last;
@@ -53,12 +61,11 @@ $(document).ready(function() {
 
                 if(last < 2){last = 6}
                 if(first > 5){first = 1}
-                console.log($last)
-                console.log($first)
             }
         });
-
     }
+
+
     $('#overlay').click(function() {
         $('#overlay').fadeOut(300);
     });
@@ -67,8 +74,32 @@ $(document).ready(function() {
         $('#overlay').fadeOut(300);
     });
 
+    $.getJSON('../LAL.json', function(data){
+        let html = [];
+        $.each(data, function(i, item) {
+            // html.push('<div class="popup_contents">');
+                html.push('<div id="popup_contents">');
+                    html.push('<div >' + item.artist[0].left + '</div>');
+                    html.push('<div >' + item.lastName[0].main + '</div>');
+                    html.push('<div >' + item.lastName[0].aside + '</div>');
+                    html.push('<div >' + item.lastName[0].right+ '</div>');
+                html.push('</div>'); html.push('</div>');
+            // html.push('</div>'); html.push('</div>');
+       });
+    });
+
+    $('#artistJson').html(html.join(''));
     // menu_event();
 });
+
+function scrolling(obj){
+    if (!obj){  // 예외처리, 현재는 기능적으로 필요한 부분은 아님, 관례적 사용
+        $('html, body').animate({scrollTop:0},speed);
+    }else{
+        var posTop = $(obj).offset().top;   // posTop = 매개변수로 들어온 컨텐츠 obj 의 offset().top - 네비게이션 높이
+        $('html, body').animate({scrollTop:posTop}, speed ) // body의 스크롤이동 : posTop
+    }
+};
 
 function box(item){
     $('#overlay').fadeIn(300); 
