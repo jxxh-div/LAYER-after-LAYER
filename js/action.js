@@ -10,6 +10,17 @@ let imgCnt=0;
 
 
 $(document).ready(function() {
+    $(".loading").click(function(){
+        $(this).animate({
+            //width: "0px",
+            marginLeft:"100%",
+          },
+          500,);
+        //   function() {
+        //       $("#text").text("애니메이션 효과 실행이 완료되었습니다.");
+        //   });
+    })
+
     let $img = $("#banner_in div");
     let $first;
     let $last;
