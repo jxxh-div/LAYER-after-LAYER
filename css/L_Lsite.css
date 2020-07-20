@@ -14,7 +14,7 @@ body{
     width: 100%; 
     position: relative;
     float: left;
-    height: 400px;
+    height: 330px;
 }
 #banner{
     top:0px;
@@ -104,9 +104,9 @@ body{
 }
 
 #main_sticker{
-    width: 250px;
+    width: 280px;
     float: right;
-    margin-right: 8%;
+    margin-right: 5%;
     margin-top: 80px;
 }
 
@@ -117,6 +117,7 @@ body{
     height: auto;
     width: 100%;
     overflow: hidden;
+    padding-bottom: 100px;
 }
 /* about */
 #about{
@@ -128,6 +129,10 @@ body{
     float: left;
     clear: both;
     margin-left: 6%;
+}
+#about_text h1{
+    font-size: 30px;
+    font-weight: bold;
 }
 /* popup */
 .about_popup{
@@ -156,16 +161,16 @@ body{
 }
 .wrapper {
     display: grid;
-    grid-gap: 50px;
+    grid-gap: 5%;
+    column-gap: 5%;
     grid-template-columns:  repeat(3,1fr);
-    grid-template-rows: repeat(2, 350px);
+    grid-template-rows: repeat(3, 33%);
     width: 80%;
 
 }
-.box {
-    background-color: #444;
-    color:white;
-    font-size: 30px;
+
+.box img{
+    width: 100%;
 }
 #overlay {
     position: fixed;
@@ -199,7 +204,7 @@ body{
         display: grid;
         grid-template-rows: repeat(4, 100px);
         grid-template-columns: repeat(3, 1fr);
-        grid-gap:25px;
+        grid-gap:14px;
         row-gap:10px;
         grid-template-areas:
           "left main right"
@@ -229,8 +234,16 @@ text-align: left;}
     width: 100%;
     height: auto;
 }
-#contact img{
+#contact_img{
     width: 15%;
+    margin:0 auto;
+}
+#contact_p{
+    padding-top:3%;
+    padding-bottom: 3%;
+    width: 500px;
+    margin:0 auto;
+
 }
 
 /* mobile */
@@ -241,34 +254,58 @@ text-align: left;}
 
     #main_logo{
         width: 100px;
+        margin-left: 9%;
     }
     #main_menu{
         float: right;
         margin-left: 0;
-        margin-right: 10%;
+        margin-right: 9%;
+        padding-left:7%;
     }
     #main_menu li{
         font-size:20px;
     }
     #main_sticker{
-        width: 140px;
+        width: 125px;
+        clear: both;
+        margin-top:60px;
     }
+    /* about */
+    #about_text{
+        margin-left:9%;
+    }
+    #about_text h1{
+        line-height: 26px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #about_text p{
+        font-size: 10px;
+    }
+    #about_popup{
+        margin-top:20%;
+    }
+    #about_message{
+        height: 160px;
+    }
+    /* artist */
     #artists{
         margin: 0;
     }
-    /* artist */
     #artist_icon{
         width: 30%;
     }
     /* grid */
     .wrapper {
         display: grid;
-        width: 100%;
+        width: 90%;
+        margin-left:3%;
         grid-template-columns:  repeat(2,50%);
         /* 옵션하나당 박스하나. */
-        grid-template-rows: repeat(2, 120px);
+        grid-template-rows: repeat(4, 22%);
         /* 박스 길이*/
-        grid-gap: 5px;
+        grid-gap: 20px;
+        column-gap: 15px;
     }
     #popup{
         margin-top:4%;
@@ -281,9 +318,6 @@ text-align: left;}
     #popup_logo{
         margin: 12% 0;
         margin-top:0;
-    }
-    .popup_contents{
-        
     }
     #popup_contents{
 
@@ -306,6 +340,20 @@ text-align: left;}
     #popup_main{width: 170px}
     #popup_aside{width: 170px}
     #popup_right{height: 278px;}
+    /* contact */
+    #contact_p{
+        width: auto;
+    }
+    #contact_img{
+        width: 150px;
+    }
+    #contact_img img{
+        width: 150px;
+    }
+    #contact_p{
+        font-size: 9px;
+        margin-left: 9%;
+    }
 }
 
 /* Tablets */

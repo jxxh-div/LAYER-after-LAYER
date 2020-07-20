@@ -8,6 +8,10 @@ const artists = [
     ["./img/artist/The71_left.png","./img/artist/The71_main.png","./img/artist/The71_aside.png","./img/artist/The71_right.png","The71_","dkbeam@naver.com"],
     ["./img/artist/GEETRUO_O_left.png","./img/artist/GEETRUO_O_main.png","./img/artist/GEETRUO_O_aside.png","./img/artist/GEETRUO_O_right.png","GEETRUO_O","GEETRUO_O@naver.com"],
     ["./img/artist/GEETRUO_O2_left.png","./img/artist/GEETRUO_O2_main.png","./img/artist/GEETRUO_O2_aside.png","./img/artist/GEETRUO_O2_right.png","GEETRUO_O2","GEETRUO_O2@naver.com"],
+    ["./img/artist/GEETRUO_O_left.png","./img/artist/GEETRUO_O_main.png","./img/artist/GEETRUO_O_aside.png","./img/artist/GEETRUO_O_right.png","GEETRUO_O","GEETRUO_O@naver.com"],
+    ["./img/artist/GEETRUO_O_left.png","./img/artist/GEETRUO_O_main.png","./img/artist/GEETRUO_O_aside.png","./img/artist/GEETRUO_O_right.png","GEETRUO_O","GEETRUO_O@naver.com"],
+    ["./img/artist/GEETRUO_O_left.png","./img/artist/GEETRUO_O_main.png","./img/artist/GEETRUO_O_aside.png","./img/artist/GEETRUO_O_right.png","GEETRUO_O","GEETRUO_O@naver.com"],
+    ["./img/artist/GEETRUO_O_left.png","./img/artist/GEETRUO_O_main.png","./img/artist/GEETRUO_O_aside.png","./img/artist/GEETRUO_O_right.png","GEETRUO_O","GEETRUO_O@naver.com"],
     ["./img/artist/GEETRUO_O_left.png","./img/artist/GEETRUO_O_main.png","./img/artist/GEETRUO_O_aside.png","./img/artist/GEETRUO_O_right.png","GEETRUO_O","GEETRUO_O@naver.com"]
 ]
 const save = [];
@@ -44,7 +48,7 @@ const save = [];
 $(document).ready(function() {
 
     $.each(artists, function(index, item) {
-        artist_main.push(`<div class="box" onclick="box(${index})" >`+item[4]+`</div>`);           
+        artist_main.push(`<div class="box" onclick="box(${index})" ><img src="${item[0]}" /></div>`);           
     });
     
     $('.wrapper').html(artist_main.join(''));
