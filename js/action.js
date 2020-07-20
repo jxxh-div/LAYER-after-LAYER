@@ -32,19 +32,20 @@ $(document).ready(function() {
         last = imgCnt;
 
         setInterval(() => {
+
             $img.each(function(){
                 $(this).css("left", $(this).position().left+0.5); // 1px씩 왼쪽으로 이동
             });
             $first = $("#banner"+first);//1
             $last = $("#banner"+last);//6
-            
+
             if($last.position().left > 2100) { 
                 $last.css("left", -350);
                 last--;
                 first++;
 
-                if(last < 2){last = 6}
-                if(first > 5){first = 1}
+                if(last < 1){last = 7}
+                if(first > 6){first = 1}
             }
         });
     }
