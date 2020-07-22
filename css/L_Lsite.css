@@ -2,7 +2,7 @@
 body{
     margin:0;
     position: relative;
-    font-family:'Galyon';
+    font-family: "Gmarket Sans TTF Bold";
 }
 /* 텍스트 드래그 방지 */
 p, h1, h2, h3, h4, a{
@@ -151,7 +151,7 @@ img{
     position: fixed;
     width: 240px;
     left:70%;
-    top:35%;
+    top:20%;
 }
 
 /* body */
@@ -200,6 +200,7 @@ img{
 }
 #artists{
     margin-left:10%;
+    margin-bottom: 12%;
     max-width: 100%;
     width: 100%;
     height: auto;
@@ -209,7 +210,7 @@ img{
     grid-gap: 5%;
     column-gap: 5%;
     grid-template-columns:  repeat(3,1fr);
-    grid-template-rows: repeat(7, 13%);
+    grid-template-rows: repeat(6, 14%);
     width: 80%;
 }
 .box{
@@ -220,15 +221,20 @@ img{
     height: auto;
 }
 #Thumbnail_name{
+    font-family: "Gmarket Sans TTF Bold";
     max-width: 100%;
     width: 24%;
-    padding-top: 11%;
-    padding-bottom: 11.5%;
-    opacity:0.5;
+    padding-top: 10.7%;
+    padding-bottom: 10.7%;
+    opacity: 0.5;
     display: none;
     background-color: black;
     position: absolute;
     color: white;
+}
+#Thumnail_img img{
+    width: 100%;
+    height: auto;
 }
 #overlay {
     position: fixed;
@@ -257,27 +263,33 @@ img{
     margin: 40px 0;
     margin-top: 0px;
 }
+#m_close{
+    display:none;
+}
 #popup_contents{
     display: grid;
-        display: grid;
-        grid-template-rows: repeat(4, 100px);
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap:14px;
-        row-gap:10px;
-        grid-template-areas:
-          "left main right"
-          "left main right"
-          "left aside right"
-          "info contact .";
+    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:14px;
+    row-gap:10px;
+    grid-template-areas:
+        "left main right"
+        "left main right"
+        "left aside right"
+        "info contact .";
 }
-#popup_left { grid-area: left; }
-#popup_main   { grid-area: main;   }
-#popup_aside  { grid-area: aside;  }
-#popup_right { grid-area: right; }
+#popup_left { grid-area: left;}
+#popup_main   { grid-area: main;}
+#popup_aside  { grid-area: aside;}
+#popup_right { grid-area: right;}
 #popup_info{ grid-area : info;
-text-align: left;}
+    font-family: "Helvetica83-ExtendedHeavy";
+    text-align: left;}
 #popup_contact{ grid-area : contact;
 text-align: left;}
+#popup_contact p{
+    font-family: "Gmarket Sans TTF";
+}
 
 #popup_info a img{
     width: 10%;
@@ -296,7 +308,7 @@ text-align: left;}
     height: auto;
 }
 #contact_img{
-    width: 15%;
+    width: 10%;
     margin:0 auto;
 }
 #contact_p{
@@ -356,6 +368,7 @@ text-align: left;}
     /* artist */
     #artists{
         margin: 0;
+        /* margin-bottom: %; */
     }
     #artist_icon{
         width: 30%;
@@ -381,25 +394,32 @@ text-align: left;}
         font-size: 12px;
     }
     #popup_logo{
-        margin: 12% 0;
-        margin-top:0;
+        margin: 60px 0;
+        margin-top: 0px;
+    }
+    #m_a_logo{
+        float: left;
+    }
+    #m_close{
+        display:block;
+        width: 11%;
+        float: right;
     }
     #popup_contents{
-
-        display: grid;
-            display: grid;
-            grid-template-rows: repeat(7, 100px 100px 40px 60px 70px 70px 50px);
-            grid-template-columns: repeat(2,50%);
-            /* grid-gap:74%;
-            row-gap:20%; */
-            grid-template-areas:
-              "left left"
-              "left left"
-              "left left"
-              "info contact"
-              "main right"
-              "main right"
-              "aside right"
+    display: grid;
+    grid-template-rows: repeat(7, 35%);
+    grid-template-columns: repeat(2,55%);
+    grid-gap:0px;
+    row-gap:0px;
+    column-gap: 0px;
+    grid-template-areas:
+        "left left"
+        "left left"
+        "left left"
+        "info contact"
+        "main right"
+        "main right"
+        "aside right"
     }
     #popup_left{width:150%}
     #popup_main{width: 170px}
@@ -419,15 +439,25 @@ text-align: left;}
         font-size: 9px;
         margin-left: 9%;
     }
+    #Thumbnail_name{
+        width: 45%;
+        padding-top: 17.5%;
+        padding-bottom: 17.5%;
+    }
 }
 
 /* Tablets */
-@media (min-width: 600px) and (max-width: 1025px) {
+@media (min-width: 900px) and (max-width: 1025px) {
     #popup{
         margin-top:40%;
     }
     #main_sticker{
-        top: 25%;
+        top: 20%;
+    }
+    #Thumbnail_name{
+        padding-top: 11%;
+        padding-bottom: 11%;
+
     }
     /* 상세페이지가 아이패드에서 좀 위에뜸. */
 }
