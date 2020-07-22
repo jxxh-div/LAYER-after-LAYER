@@ -219,11 +219,16 @@ img{
     width: 100%;
     height: auto;
 }
-
 #Thumbnail_name{
+    max-width: 100%;
+    width: 24%;
+    padding-top: 11%;
+    padding-bottom: 11.5%;
+    opacity:0.5;
     display: none;
+    background-color: black;
     position: absolute;
-    color: black;
+    color: white;
 }
 #overlay {
     position: fixed;
@@ -344,7 +349,6 @@ text-align: left;}
     }
     #about_popup{
         margin-top:20%;
-        margin-bottom: -55%;
     }
     #about_message{
         height: 120px;
@@ -363,7 +367,7 @@ text-align: left;}
         margin-left:3%;
         grid-template-columns:  repeat(2,50%);
         /* 옵션하나당 박스하나. */
-        grid-template-rows: repeat(9, 9%);
+        grid-template-rows: repeat(9, 10%);
         /* 박스 길이*/
         grid-gap: 20px;
         column-gap: 15px;

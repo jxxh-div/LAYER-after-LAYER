@@ -61,9 +61,9 @@ $(document).ready(function() {
     $.each(artists, function(index, item) {
         artist_main.push(`
         <div class="box" onclick="box(${index})" >
+            <div id="Thumbnail_name">${item[4]}</div>
             <div>
                 <img src="${item[6]}" />
-                <h1 id="Thumbnail_name">${item[4]}<h1>
             </div>
         </div>`);
     });
@@ -88,17 +88,15 @@ $(document).ready(function() {
     $('.box').hover(function(){
         $('#Thumbnail_name').animate({
             display:"block",
-        },500);
-
-        $(this).animate({
-            backgroundColor: "#0000000",
-            opacity:"0.5",
-        },500);
+            // backgroundColor: "black",
+            
+            // opacity:"0.5",
+        },300);
     }, function(){
-        $(this).animate({
+        $('#Thumbnail_name').animate({
             backgroundColor: "",
             opacity:"1",
-        });
+        }, 300);
     });
    
 });
