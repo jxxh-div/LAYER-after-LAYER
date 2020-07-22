@@ -7,18 +7,28 @@ let first=1;
 let last;
 let imgCnt=0;
 //0 left, 1 main, 2 aside, 3right, 4name, 5contact
-
+const time = 500;
 
 $(document).ready(function() {
+    loading1();
+    //     $("#loading_page2").animate({
+    //         top:"50%",
+    //     },500, function() {
+    //         $( this ).animate( {
+    //         top:"49%",
+    //         //paddingTop:"10px"
+    //         }, 50, function() {
+    //             $( this ).animate( {
+    //             top:"50%",
+    //             //paddingTop:"0px"
+    //             }, 50 );
+    //           });
+    //       });
+
     $(".loading").click(function(){
         $(this).animate({
-            //width: "0px",
             marginLeft:"100%",
-          },
-          500,);
-        //   function() {
-        //       $("#text").text("애니메이션 효과 실행이 완료되었습니다.");
-        //   });
+          }, 500);
     })
 
     let $img = $("#banner_in div");
@@ -39,7 +49,7 @@ $(document).ready(function() {
         $(this).attr("id", "banner"+(++imgCnt)); // img에 id 속성 추가
     });
 
-    if( imgCnt > 6){                //배너 6개 이상이면 이동시킴
+    if( imgCnt > 5){                //배너 6개 이상이면 이동시킴
         last = imgCnt;
 
         setInterval(() => {
@@ -50,13 +60,13 @@ $(document).ready(function() {
             $first = $("#banner"+first);//1
             $last = $("#banner"+last);//6
 
-            if($last.position().left > 2100) { 
+            if($last.position().left > 2450) { 
                 $last.css("left", -350);
                 last--;
                 first++;
 
-                if(last < 1){last = 7}
-                if(first > 6){first = 1}
+                if(last < 1){last = 8}
+                if(first > 7){first = 1}
             }
         });
     }
@@ -70,3 +80,19 @@ function scrolling(obj){
         $('html, body').animate({scrollTop:posTop}, speed ) // body의 스크롤이동 : posTop
     }
 };
+
+const loading1 = () =>{
+    $("#loading_page").animate({
+        top:"50%",
+    },500, function() {
+        $( this ).animate( {
+        top:"49%",
+        //paddingTop:"10px"
+        }, 50, function() {
+            $( this ).animate( {
+            top:"50%",
+            //paddingTop:"0px"
+            }, 50 );
+          });
+      });
+}

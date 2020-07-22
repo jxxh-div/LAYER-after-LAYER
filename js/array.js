@@ -3,16 +3,28 @@ let artist_contents = [];
 let artist_info = [];
 let artist_contact = [];
 let artist_main = [];
-
+//left,main,aside,right,name,mail,Thumnail,insta,twitter
+//0   ,1   ,2    ,3    ,4   ,5   ,6       ,7    ,8
 const artists = [
-    ["./img/artist/The71_left.png","./img/artist/The71_main.png","./img/artist/The71_aside.png","./img/artist/The71_right.png","The71_","dkbeam@naver.com"],
-    ["./img/artist/GEETRUO_O_left.png","./img/artist/GEETRUO_O_main.png","./img/artist/GEETRUO_O_aside.png","./img/artist/GEETRUO_O_right.png","GEETRUO_O","GEETRUO_O@naver.com"],
-    ["./img/artist/GEETRUO_O2_left.png","./img/artist/GEETRUO_O2_main.png","./img/artist/GEETRUO_O2_aside.png","./img/artist/GEETRUO_O2_right.png","GEETRUO_O2","GEETRUO_O2@naver.com"],
-    ["./img/artist/GEETRUO_O_left.png","./img/artist/GEETRUO_O_main.png","./img/artist/GEETRUO_O_aside.png","./img/artist/GEETRUO_O_right.png","GEETRUO_O","GEETRUO_O@naver.com"],
-    ["./img/artist/GEETRUO_O_left.png","./img/artist/GEETRUO_O_main.png","./img/artist/GEETRUO_O_aside.png","./img/artist/GEETRUO_O_right.png","GEETRUO_O","GEETRUO_O@naver.com"],
-    ["./img/artist/GEETRUO_O_left.png","./img/artist/GEETRUO_O_main.png","./img/artist/GEETRUO_O_aside.png","./img/artist/GEETRUO_O_right.png","GEETRUO_O","GEETRUO_O@naver.com"],
-    ["./img/artist/GEETRUO_O_left.png","./img/artist/GEETRUO_O_main.png","./img/artist/GEETRUO_O_aside.png","./img/artist/GEETRUO_O_right.png","GEETRUO_O","GEETRUO_O@naver.com"],
-    ["./img/artist/GEETRUO_O_left.png","./img/artist/GEETRUO_O_main.png","./img/artist/GEETRUO_O_aside.png","./img/artist/GEETRUO_O_right.png","GEETRUO_O","GEETRUO_O@naver.com"]
+    ["./img/artist/The71_left.png","./img/artist/The71_main.png","./img/artist/The71_aside.png","./img/artist/The71_right.png","The71_","dkbeam@naver.com","./img/Thumnail/THE71_Thumnail.png","",""],
+    ["./img/artist/GEETRUO_O_left.png","./img/artist/GEETRUO_O_main.png","./img/artist/GEETRUO_O_aside.png","./img/artist/GEETRUO_O_right.png","GEETRUO_O","GEETRUO_O@naver.com","./img/Thumnail/Thumnail_geetruo_o.png","",""],
+    ["","","","","","","./img/Thumnail/Thumnail_HEEZEY.jpg",""],
+    ["","","","","","","./img/Thumnail/Thumnail__DALI-PARK.png",""],
+    ["","","","","","","./img/Thumnail/Thumnail_ADHR.png",""],
+    ["","","","","","","./img/Thumnail/Thumnail_pumpum.png",""],
+    ["","","","","","","./img/Thumnail/Thumnail_ohohaoho.jpg",""],
+    ["","","","","","","./img/Thumnail/Thumnail_미래의미래.jpg",""],
+    ["","","","","","","./img/Thumnail/Thumnail_won.png",""],
+    ["","","","","","","./img/Thumnail/Thumnail_yigyurae.jpg",""],
+    ["","","","","","","./img/Thumnail/Thumnail_HAKYUN.jpeg",""],
+    ["","","","","","","./img/Thumnail/Thumnail_ttissue.png",""],
+    ["","","","","","","./img/Thumnail/Thumnail_pluto-project.jpeg",""],
+    ["","","","","","","./img/Thumnail/Thumnail_EIM.jpg",""],
+    ["","","","","","","./img/Thumnail/Thumnail_0810.jpg.jpg",""],
+    ["","","","","","","./img/Thumnail/Thumnail_en9ook.jpg",""],
+    ["","","","","","","./img/Thumnail/Thumnail_live-kyuseon-lee_라큐리.jpeg",""],
+    ["","","","","","","./img/Thumnail/Thumnail_waterwood_수목.png",""],
+    
 ]
 const save = [];
     function box(item){
@@ -27,8 +39,8 @@ const save = [];
 
                 artist_contents.push(`<div id="popup_info">`);
                     artist_contents.push(`<h3>`+artists[item][4]+`</h3>`);
-                    artist_contents.push(`<a href=""><img src="./img/instagram.png" alt="instargam link" /></a>`)
-                    artist_contents.push(`<a href=""><img src="./img/twitter.png" alt="twitter link" /></a>`)
+                    artist_contents.push(`<a href="${artists[item][6]}"><img src="./img/instagram.svg" alt="instargam link" /></a>`)
+                    artist_contents.push(`<a href="${artists[item][7]}"><img src="./img/twitter.svg" alt="twitter link" /></a>`)
                 artist_contents.push(`</div>`);
     
                 artist_contents.push(`<div id="popup_contact">`);
@@ -40,7 +52,6 @@ const save = [];
 
 
         }
-
             
             $('#popup_contents').html(artist_contents.join(''));
     };
@@ -48,7 +59,13 @@ const save = [];
 $(document).ready(function() {
 
     $.each(artists, function(index, item) {
-        artist_main.push(`<div class="box" onclick="box(${index})" ><img src="${item[0]}" /></div>`);           
+        artist_main.push(`
+        <div class="box" onclick="box(${index})" >
+            <div>
+                <img src="${item[6]}" />
+                <h1 id="Thumbnail_name">${item[4]}<h1>
+            </div>
+        </div>`);
     });
     
     $('.wrapper').html(artist_main.join(''));
@@ -67,6 +84,21 @@ $(document).ready(function() {
         artist_contents.length = 0;
         artist_info.length = 0;
         artist_contact.length = 0;
+    });
+    $('.box').hover(function(){
+        $('#Thumbnail_name').animate({
+            display:"block",
+        },500);
+
+        $(this).animate({
+            backgroundColor: "#0000000",
+            opacity:"0.5",
+        },500);
+    }, function(){
+        $(this).animate({
+            backgroundColor: "",
+            opacity:"1",
+        });
     });
    
 });
