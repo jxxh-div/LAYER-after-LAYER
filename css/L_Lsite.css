@@ -252,11 +252,13 @@ img{
     z-index: 10;
  }
 #popup {
+    border-radius: 0.5em;
     max-width: 700px;
     width: 80%;
     max-height: 500px;
     height: 80%; 
     padding: 50px;
+    padding-bottom: 0;
     position: relative;
     background: #fff;
     margin: 0 auto;
@@ -290,12 +292,39 @@ img{
     text-align: left;}
 #popup_contact{ grid-area : contact;
 text-align: left;}
-#popup_contact p{
-    font-family: "Gmarket Sans TTF";
-}
 
 #popup_info a img{
     width: 10%;
+}
+#popup_info{
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 17px;
+}
+#popup_info p{
+    margin: 0;
+}
+#insta{
+    margin-right: 8px;
+}
+#popup_info a img{
+    width: 22px;
+}
+#popup_contact{
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: 17px;
+    margin-left:-200px;
+}
+#p_email{
+    font-family: "Gmarket Sans TTF";
+    font-size: 10px;
+}
+#p_contact{
+    font-family: "Helvetica83-ExtendedHeavy";
+}
+#popup_contact p{
+    margin:0;
 }
 /* bottom */
 .bottom{
@@ -322,10 +351,16 @@ text-align: left;}
 
 }
 /* PC */
-@media (min-width: 1026px) and (max-width: 1400px){
+@media (min-width: 1300px) and (max-width: 1400px){
     #Thumbnail_name{
         padding-top: 10.5%;
         padding-bottom: 10.3%;
+    }
+}
+@media (min-width: 1050px) and (max-width: 1290px){
+    #Thumbnail_name{
+        padding-top: 10.4%;
+        padding-bottom: 10.2%;
     }
 }
 /* Tablets */
