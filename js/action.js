@@ -11,19 +11,7 @@ const time = 500;
 
 $(document).ready(function() {
     loading1();
-    //     $("#loading_page2").animate({
-    //         top:"50%",
-    //     },500, function() {
-    //         $( this ).animate( {
-    //         top:"49%",
-    //         //paddingTop:"10px"
-    //         }, 50, function() {
-    //             $( this ).animate( {
-    //             top:"50%",
-    //             //paddingTop:"0px"
-    //             }, 50 );
-    //           });
-    //       });
+
 
     $(".loading").click(function(){
         $(this).animate({
@@ -82,7 +70,20 @@ function scrolling(obj){
 };
 
 const loading1 = () =>{
-    $("#loading_page").animate({
+    $("#loading_L1").animate({
+        top:"50%",
+    },300, function() {
+        $( this ).animate( {
+        top:"49%",
+        //paddingTop:"10px"
+        }, 50, function() {
+            $( this ).animate( {
+            top:"50%",
+            //paddingTop:"0px"
+            }, 50 );
+          });
+      });
+    $("#loading_L2").animate({
         top:"50%",
     },500, function() {
         $( this ).animate( {
@@ -95,4 +96,72 @@ const loading1 = () =>{
             }, 50 );
           });
       });
+      $("#loading_A").animate({
+        top:"50%",
+    },400, function() {
+        $( this ).animate( {
+        top:"49%",
+        //paddingTop:"10px"
+        }, 50, function() {
+            $( this ).animate( {
+            top:"50%",
+            //paddingTop:"0px"
+            }, 50 );
+          });
+      });
+    $("#loading_x").animate({
+        top:"50%",
+    },600, function() {
+        $( this ).animate( {
+        top:"48%",
+        left:"41%",
+        //paddingTop:"10px"
+        }, 50, function() {
+            $( this ).animate( {
+            top:"50%",
+            left:"42%",
+            //paddingTop:"0px"
+            }, 50 );
+          });
+      });
+      $("#loading_o").animate({
+        top:"50%",
+    },500, function() {
+        $( this ).animate( {
+        top:"49%",
+        //paddingTop:"10px"
+        }, 50, function() {
+            $( this ).animate( {
+            top:"50%",
+            //paddingTop:"0px"
+            }, 50 );
+          });
+      });
+    $("#loading_l").animate({
+        top:"50%",
+    },200, function() {
+        $( this ).animate( {
+        top:"49%",
+        //paddingTop:"10px"
+        }, 50, function() {
+            $( this ).animate( {
+            top:"50%",
+            //paddingTop:"0px"
+            }, 50 );
+          });
+      });
+      $("#loading_tw").animate({
+        top:"50%",
+    },600, function() {
+        $( this ).animate( {
+        top:"49%",
+        //paddingTop:"10px"
+        }, 50, function() {
+            $( this ).animate( {
+            top:"50%",
+            //paddingTop:"0px"
+            }, 50 );
+          });
+      });
+      
 }
