@@ -214,6 +214,8 @@ img{
     width: 80%;
 }
 .box{
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
 }
 .box img{
@@ -318,7 +320,26 @@ text-align: left;}
     margin:0 auto;
 
 }
-
+/* PC */
+@media (min-width: 1026px) and (max-width: 1400px){
+    #Thumbnail_name{
+        padding-top: 10.5%;
+        padding-bottom: 10.3%;
+    }
+}
+/* Tablets */
+@media (min-width: 900px) and (max-width: 1025px) {
+    #popup{
+        margin-top:40%;
+    }
+    #main_sticker{
+        top: 20%;
+    }
+    #Thumbnail_name{
+        opacity: 0;
+    }
+    /* 상세페이지가 아이패드에서 좀 위에뜸. */
+}
 /* mobile */
 @media (min-width: 280px) and (max-width: 480px) {
      .top{
@@ -365,25 +386,29 @@ text-align: left;}
     #about_message{
         height: 120px;
     }
+    #about_message p{
+        font-size: 10px;
+    }
     /* artist */
     #artists{
         margin: 0;
         /* margin-bottom: %; */
     }
     #artist_icon{
-        width: 30%;
+        width: 50%;
     }
     /* grid */
     .wrapper {
         display: grid;
         width: 90%;
-        margin-left:3%;
+        height: auto;
+        margin-left:2.5%;
         grid-template-columns:  repeat(2,50%);
         /* 옵션하나당 박스하나. */
-        grid-template-rows: repeat(9, 10%);
+        grid-template-rows: repeat(9, 12%);
         /* 박스 길이*/
-        grid-gap: 20px;
-        column-gap: 15px;
+        grid-gap: 0px;
+        column-gap: 6%;
     }
     #popup{
         margin-top:4%;
@@ -392,6 +417,7 @@ text-align: left;}
         max-height: 100%;
         height: 100%;
         font-size: 12px;
+        overflow:scroll;
     }
     #popup_logo{
         margin: 60px 0;
@@ -402,29 +428,57 @@ text-align: left;}
     }
     #m_close{
         display:block;
-        width: 11%;
+        width: 10%;
+        margin-right: 4px;
         float: right;
     }
     #popup_contents{
-    display: grid;
-    grid-template-rows: repeat(7, 35%);
-    grid-template-columns: repeat(2,55%);
-    grid-gap:0px;
-    row-gap:0px;
-    column-gap: 0px;
-    grid-template-areas:
-        "left left"
-        "left left"
-        "left left"
-        "info contact"
-        "main right"
-        "main right"
-        "aside right"
+        display: grid;
+        grid-template-rows: repeat(7, 15% 15% 16% 14% 10% 18% 30%);
+        grid-template-columns: repeat(3,24%);
+        grid-gap: 0px;
+        row-gap: 0px;
+        column-gap: 21px;
+        grid-template-areas:
+            "left left left"
+            "left left left"
+            "left left left"
+            "info info contact"
+            "main main right"
+            "main main right"
+            "aside aside right"
+   }
+    #popup_left{width: 295px;}
+    #popup_main{width: 172px;}
+    #popup_aside{width: 172px;}
+    #popup_right{height: 285px;}
+    #popup_info{
+        font-size: 17px;
+        line-height: 30px;
+        margin-top: 17px;
     }
-    #popup_left{width:150%}
-    #popup_main{width: 170px}
-    #popup_aside{width: 170px}
-    #popup_right{height: 278px;}
+    #popup_info p{
+        margin: 0;
+    }
+    #insta{
+        margin-right: 8px;
+    }
+    #popup_info a img{
+        width: 22px;
+    }
+    #popup_contact{
+        font-size: 15px;
+        line-height: 30px;
+        margin-top: 17px;
+        margin-left:-45px;
+    }
+    #p_email{
+        font-size: 10px;
+    }
+    #popup_contact p{
+        margin:0;
+        font-family: "Gmarket Sans TTF Bold";
+    }
     /* contact */
     #contact_p{
         width: auto;
@@ -440,24 +494,6 @@ text-align: left;}
         margin-left: 9%;
     }
     #Thumbnail_name{
-        width: 45%;
-        padding-top: 17.5%;
-        padding-bottom: 17.5%;
+        opacity: 0;
     }
-}
-
-/* Tablets */
-@media (min-width: 900px) and (max-width: 1025px) {
-    #popup{
-        margin-top:40%;
-    }
-    #main_sticker{
-        top: 20%;
-    }
-    #Thumbnail_name{
-        padding-top: 11%;
-        padding-bottom: 11%;
-
-    }
-    /* 상세페이지가 아이패드에서 좀 위에뜸. */
 }
