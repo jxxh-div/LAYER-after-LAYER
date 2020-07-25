@@ -9,9 +9,42 @@ let imgCnt=0;
 //0 left, 1 main, 2 aside, 3right, 4name, 5contact
 const time = 500;
 
+// $("#m1").animate({
+//     marginTop:"18px",
+// },300,function(){
+//     $(this).toggleClass('rotate_m1');
+// });
+// $("#m2").animate({
+//     marginTop:"-4px",
+//     marginBottom:"-12px",
+// },300,function(){
+//     $(this).toggleClass('rotate_m2');
+//     $("#main_menu").fadeIn(200);
+// });
+// $("#m3").fadeOut(200);
+
+function mobileMenu(){
+    $("#mo_menu").click(function(){
+        $("#m1").animate({
+            marginTop:"18px",
+        },300,function(){
+            $(this).toggleClass('rotate_m1');
+        });
+        $("#m2").animate({
+            marginTop:"-4px",
+            marginBottom:"-12px",
+        },300,function(){
+            $(this).toggleClass('rotate_m2');
+            $("#main_menu").fadeIn(200);
+        });
+        $("#m3").fadeOut(200);
+    });
+
+}
 $(document).ready(function() {
     loading1();
-
+    
+    mobileMenu();
 
     $(".loading").click(function(){
         $(this).animate({
