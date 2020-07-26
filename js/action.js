@@ -13,7 +13,7 @@ let rotateNumber2 = 0;
 const time = 500;
 const menuSpeed = 200;
 const m_menuSpeed = 300;
-function mobileMenu(){
+const mobileMenu = () =>{
     
         $("#mo_menu").on('click',function(){
             if (toggle == 0){
@@ -64,13 +64,35 @@ function mobileMenu(){
                 
             }
         });
+};
+// const scrollMenu = () =>{
 
-    
-}
+// $("body").on('mousewheel',function(e){ 
+//     let wheel = $(window).scrollTop();
+//     console.log(toggle)
+//     if(toggle === 0){
+//         if(wheel > 200){         
+//             $("#mo_menu").fadeIn(300);
+//             $("#main_menu").fadeOut(300);
+//         } else {
+//             $("#main_menu").css("margin", "0 35px");
+//             $("#main_menu").fadeIn(300);
+            
+//             $("#mo_menu").fadeOut(300);
+//         }
+//     }else{
+//         $("#main_menu").css("margin", "40px 71%");
+//         null;
+//     }
+// });
+
+// }
 $(document).ready(function() {
     loading1();
 
     mobileMenu();
+
+    // scrollMenu();
 
     $(".loading").click(function(){
         $(this).animate({
