@@ -427,7 +427,7 @@ text-align: left;}
         background-color: blue;
     }
     #main_menu{
-        position: fixed;
+        /* position: fixed; */
         /* display: none; */
         font-family: "GmarketSansLight";
         /* margin: 40px 71%; */

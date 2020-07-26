@@ -44,7 +44,7 @@ function mobileMenu(){
 $(document).ready(function() {
     loading1();
     
-    mobileMenu();
+    // mobileMenu();
 
     $(".loading").click(function(){
         $(this).animate({
