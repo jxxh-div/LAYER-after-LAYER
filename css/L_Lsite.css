@@ -147,7 +147,7 @@ img{
 }
 /* visited */
 #main_menu li a:hover{
-    color:gray;
+    color:blue;
 }
 #main_menu li a{
     text-decoration: none;
@@ -439,6 +439,9 @@ text-align: left;}
         padding-left:7%;
         
     }
+    #main_menu li a:hover{
+        color:white;
+    }
     #main_menu li{
         font-size:20px;
         margin-bottom: 5px;
@@ -595,5 +598,13 @@ text-align: left;}
     .rotate_m2{
         transition: all ease 0.5s;
         transform: rotate(135deg);
+    }
+    .rotate_m1_to{
+        transition: all ease 0.5s;
+        transform: rotate(0deg);
+    }
+    .rotate_m2_to{
+        transition: all ease 0.5s;
+        transform: rotate(0deg);
     }
 }
