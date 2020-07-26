@@ -428,9 +428,9 @@ text-align: left;}
     }
     #main_menu{
         position: fixed;
-        display: none;
+        /* display: none; */
         font-family: "GmarketSansLight";
-        margin: 40px 71%;
+        /* margin: 40px 71%; */
         left: 0;
         right: 0;
         /* 모바일 */
