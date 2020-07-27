@@ -88,7 +88,7 @@ const mobileMenu = () =>{
 
 // }
 $(document).ready(function() {
-    loading1();
+    // loading1();
 
     mobileMenu();
 
