@@ -49,22 +49,6 @@ img{
     color:white;*/
 }
 
-.loading {
-}
-#loading_L1{clear: both;}
-#loading_A{}
-#loading_L2{}
-#loading_tw{margin-left:50px; margin-top:0px;}
-
-#moon{
-
-}
-#loading_x{ margin-top:25px;}
-#loading_x img{ width: 75px;}
-#loading_o{clear: both;}
-#loading_o img{ width: 75px;}
-#loading_l img{width:120px; height:auto}
-
 /* loading */
 
 .top{
@@ -139,7 +123,7 @@ img{
     position: relative;
     float: left;
     margin-top:0px;
-    margin-left: 60px;
+    width: 300px;
 }
 #main_menu li{
     float: right;
@@ -156,16 +140,14 @@ img{
     color:#727272;
 }
 #listStyle{
+    position: relative;
+    float: left;
     width: 11px;
     height: 12px;
     background-color: blue;
-    border-radius: 50px;
-    margin-right: 12px;
-    margin-top: 13px;
+    border-radius: 100px;
+    margin:15px 10px;
     display: none;
-}
-.listStyle{
-    float: left;
 }
 
 #main_sticker{
@@ -408,6 +390,16 @@ text-align: left;}
     #main{
         margin-top: 72px;
     }
+    #listStyle{
+        position: relative;
+        float: left;
+        width: 0px;
+        height: 0px;
+        background-color: blue;
+        border-radius: 0;
+        margin:0;
+        display: none;
+    }
     #main_logo{
         width: 100px;
         margin-left: 9%;
@@ -433,6 +425,7 @@ text-align: left;}
         display: none;
         font-family: "GmarketSansLight";
         margin: 40px 71%;
+        width: auto;
         left: 0;
         right: 0;
         /* 모바일 */

@@ -14,7 +14,6 @@ const time = 500;
 const menuSpeed = 200;
 const m_menuSpeed = 300;
 const mobileMenu = () =>{
-    
         $("#mo_menu").on('click',function(){
             if (toggle == 0){
                 toggle = 1;
@@ -88,10 +87,7 @@ const mobileMenu = () =>{
 
 // }
 $(document).ready(function() {
-    // loading1();
-
     mobileMenu();
-
     // scrollMenu();
 
     $(".loading").click(function(){
@@ -107,10 +103,25 @@ $(document).ready(function() {
     $("ul li a").click(function(){  // 네비게이션 클릭시
         var direction = $(this).attr("href");   // direction = 클릭한 요소의 href 속성
         scrolling( direction ); // direction 을 인자로 함수 실행
+        switch(direction){
+            case "#about" :
+                $('.list1').fadeIn();
+                $('.list2').fadeOut();
+                $('.list3').fadeOut();
+            break;
+            case "#artists" :
+                $('.list1').fadeOut();
+                $('.list2').fadeIn();
+                $('.list3').fadeOut();
+            break;
+            case "#contact" :
+                $('.list1').fadeOut();
+                $('.list2').fadeOut();
+                $('.list3').fadeIn();
+            break;
+        }
         return false;   // 본래 이벤트 방지
     });
-
-
 
     $img.each(function(){ // 5px 간격으로 배너 처음 위치 시킴
         $(this).css("left",bannerLeft);
@@ -149,100 +160,3 @@ function scrolling(obj){
         $('html, body').animate({scrollTop:posTop}, speed ) // body의 스크롤이동 : posTop
     }
 };
-
-const loading1 = () =>{
-    $("#loading_L1").animate({
-        top:"50%",
-    },300, function() {
-        $( this ).animate( {
-        top:"49%",
-        //paddingTop:"10px"
-        }, 50, function() {
-            $( this ).animate( {
-            top:"50%",
-            //paddingTop:"0px"
-            }, 50 );
-          });
-      });
-    $("#loading_L2").animate({
-        top:"50%",
-    },500, function() {
-        $( this ).animate( {
-        top:"49%",
-        //paddingTop:"10px"
-        }, 50, function() {
-            $( this ).animate( {
-            top:"50%",
-            //paddingTop:"0px"
-            }, 50 );
-          });
-      });
-      $("#loading_A").animate({
-        top:"50%",
-    },400, function() {
-        $( this ).animate( {
-        top:"49%",
-        //paddingTop:"10px"
-        }, 50, function() {
-            $( this ).animate( {
-            top:"50%",
-            //paddingTop:"0px"
-            }, 50 );
-          });
-      });
-    $("#loading_x").animate({
-        top:"50%",
-    },600, function() {
-        $( this ).animate( {
-        top:"48%",
-        left:"41%",
-        //paddingTop:"10px"
-        }, 50, function() {
-            $( this ).animate( {
-            top:"50%",
-            left:"42%",
-            //paddingTop:"0px"
-            }, 50 );
-          });
-      });
-      $("#loading_o").animate({
-        top:"50%",
-    },500, function() {
-        $( this ).animate( {
-        top:"49%",
-        //paddingTop:"10px"
-        }, 50, function() {
-            $( this ).animate( {
-            top:"50%",
-            //paddingTop:"0px"
-            }, 50 );
-          });
-      });
-    $("#loading_l").animate({
-        top:"50%",
-    },200, function() {
-        $( this ).animate( {
-        top:"49%",
-        //paddingTop:"10px"
-        }, 50, function() {
-            $( this ).animate( {
-            top:"50%",
-            //paddingTop:"0px"
-            }, 50 );
-          });
-      });
-      $("#loading_tw").animate({
-        top:"50%",
-    },600, function() {
-        $( this ).animate( {
-        top:"49%",
-        //paddingTop:"10px"
-        }, 50, function() {
-            $( this ).animate( {
-            top:"50%",
-            //paddingTop:"0px"
-            }, 50 );
-          });
-      });
-      
-}
