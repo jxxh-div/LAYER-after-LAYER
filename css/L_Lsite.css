@@ -130,6 +130,7 @@ img{
     clear: both;
     list-style-type: none;
     font-size:33px;
+    font-family: "GmarketSansLight";
 }
 /* visited */
 #main_menu li a:hover{
@@ -466,6 +467,7 @@ text-align: left;}
     }
     /* about */
     #about_text{
+        margin-top: 10%;
         margin-left:9%;
     }
     #about_text h1{
