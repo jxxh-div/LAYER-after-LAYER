@@ -39,11 +39,11 @@ const artists = [
     //플루토
     [`${root}EIM_01.png`,`${root}EIM_02.png`,`${root}EIM_03.png`,`${root}EIM_04.png`,"EIM<br>준휘","june1ght6@gmail.com ","./img/Thumnail/Thumnail_EIM.png","https://www.instagram.com/ifeellikeim_alive","","EIM"],
     //준휘
-    [`${root}0810.jpg_01.png`,`${root}0810.jpg_02.png`,`${root}0810.jpg_03.png`,`${root}0810.jpg_04.png`,"0810.jpg <br>지수","0810.jpg 96o81o@naver.com","./img/Thumnail/Thumnail_0810.jpg.jpg","https://www.instagram.com/_iggies_","","0810.jpg"],
+    [`${root}0810.jpg_01.png`,`${root}0810.jpg_02.png`,`${root}0810.jpg_03.png`,`${root}0810.jpg_04.png`,"0810.jpg <br>지수","96o81o@naver.com","./img/Thumnail/Thumnail_0810.jpg.jpg","https://www.instagram.com/_iggies_","","0810.jpg"],
     //지수
     [`${root}eun9ook_01.png`,`${root}eun9ook_02.png`,`${root}eun9ook_03.png`,`${root}eun9ook_04.png`,"en9ook<br>은국","199683@naver.com","./img/Thumnail/Thumnail_en9ook.png","https://www.instagram.com/eun9ook","","en9ook"],
     //은국
-    ["./img/artist/lkl_01.png","./img/artist/lkl_02.png","./img/artist/lkl_03.png","./img/artist/lkl_04.png","live kyuseon lee<br>라큐리의 터세상","kyuseon_lee@naver.com ","./img/Thumnail/Thumnail_live-kyuseon-lee.jpeg","https://www.instagram.com/live_computer_center_lee","","라큐리의 컴퓨터세상"],
+    ["./img/artist/lkl_01.png","./img/artist/lkl_02.png","./img/artist/lkl_03.png","./img/artist/lkl_04.png","live kyuseon lee<br>라큐리의 컴퓨터세상","kyuseon_lee@naver.com ","./img/Thumnail/Thumnail_live-kyuseon-lee.jpeg","https://www.instagram.com/live_computer_center_lee","","라큐리의 컴퓨터세상"],
     //라큐리
     [`${root}waterwood_01.png`,`${root}waterwood_02.png`,`${root}waterwood_03.png`,`${root}waterwood_04.png`,"waterwood<br>수목","waterwood33@gmail.com ","./img/Thumnail/Thumnail_waterwood.png","https://www.instagram.com/_waterwood","","waterwood"],
     //수목

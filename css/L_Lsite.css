@@ -152,6 +152,7 @@ img{
 }
 
 #main_sticker{
+    z-index: 50;
     position: fixed;
     width: 240px;
     left:70%;
@@ -617,4 +618,5 @@ text-align: left;}
         transition: all ease 0.5s;
         transform: rotate(0deg);
     }
+    #list1:hover{color:white}
 }
