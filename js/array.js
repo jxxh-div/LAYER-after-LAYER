@@ -3,22 +3,23 @@ let artist_contents = [];
 let artist_info = [];
 let artist_contact = [];
 let artist_main = [];
-let random = [];
+let randomArray = [];
 let r_index = 0;
 //left,main,aside,right,name,mail,Thumnail,insta,twitter,상세페이지 이름.
 //0   ,1   ,2    ,3    ,4   ,5   ,6       ,7    ,8      ,9
 //01, 02, 03, 04 로 바꾸기
+
 let root = "./img/artist/"
 const artists = [
     [`${root}The71_01.png`,"./img/artist/The71_02.png","./img/artist/The71_03.png","./img/artist/The71_04.png","THE71_<br> 더기","dkbeam@naver.com","./img/Thumnail/THE71_Thumnail.png","https://www.instagram.com/the71_","https://twitter.com/the71__","THE71"],
     //더기
-    ["./img/artist/GEETRUO_O_01.png","./img/artist/GEETRUO_O_02.png","./img/artist/GEETRUO_O_03.png","./img/artist/GEETRUO_O_04.png","GEETRUO_O<br>지트루","GEETRUO_O@naver.com","./img/Thumnail/Thumnail_geetruo_o.png","","","GEETRUO_O"],
+    ["./img/artist/GEETRUO_O_01.png","./img/artist/GEETRUO_O_02.png","./img/artist/GEETRUO_O_03.png","./img/artist/GEETRUO_O_04.png","GEETRUO_O<br>지트루","GEETRUO_O@naver.com","./img/Thumnail/Thumnail_geetruo_o.png","www.instagram.com/geetruo_o","https://twitter.com/geetruo","GEETRUO_O"],
     //지트루
     [`${root}heezey_01.png`,`${root}heezey_02.png`,`${root}heezey_03.png`,`${root}heezey_04.png`,"HEEZEY<br>히지","heezey.bae@gmail.com","./img/Thumnail/Thumnail_HEEZEY.png","https://www.instagram.com/xheezeyx","","HEEZEY"],
     //히지
     [`${root}dali_park_01.png`,`${root}dali_park_02.png`,`${root}dali_park_03.png`,`${root}dali_park_04.png`,"DALI-PARK<br>박달리","dali_park@naver.com ","./img/Thumnail/Thumnail__DALI-PARK.png","https://www.instagram.com/dali__park","","DALI-PARK"],
     //박달리
-    [`${root}adhr_01.png`,`${root}adhr_02.png`,`${root}adhr_03.png`,`${root}adhr_04.png`,"ADHR<br>어도러블호러","blue_shower@naver.com","./img/Thumnail/Thumnail_ADHR.png","https://www.instagram.com/adorable_horror","https://twitter.com/acho_acho_","ADHR"],
+    [`${root}adhr_01.png`,`${root}adhr_02.png`,`${root}adhr_03.png`,`${root}adhr_04.png`,"ADORABLE HORROR!<br>어도러블호러","blue_shower@naver.com","./img/Thumnail/Thumnail_ADHR.png","https://www.instagram.com/adorable_horror","https://twitter.com/acho_acho_","ADORABLE HORROR!"],
     //어도러블호러
     [`${root}pumpum_01.png`,`${root}pumpum_02.png`,`${root}pumpum_03.png`,`${root}pumpum_04.png`,"pumpum<br>펌펌","pumypumy99@gmail.com","./img/Thumnail/Thumnail_pumpum.png","https://www.instagram.com/pumpum_rum_","https://twitter.com/pumpum_rum_","pumpum"],
     //펌펌
@@ -46,30 +47,39 @@ const artists = [
     //라큐리
     [`${root}waterwood_01.png`,`${root}waterwood_02.png`,`${root}waterwood_03.png`,`${root}waterwood_04.png`,"waterwood<br>수목","waterwood33@gmail.com ","./img/Thumnail/Thumnail_waterwood.png","https://www.instagram.com/_waterwood","","waterwood"],
     //수목
-    
 ]
-const save = [];
-// function shuffleRandom(n){
-//     var ar = new Array();
-//     var temp;
-//     var rnum;
-   
-//     //전달받은 매개변수 n만큼 배열 생성 ( 1~n )
-//     for(var i=1; i<=n; i++){
-//         ar.push(i);
+// let artistsThumnail = () =>{
+//     for(let i=0; i<artists.length; i++){
+//         console.log(artists[i][6]);
 //     }
-
-//     //값을 서로 섞기
-//     for(var i=0; i< ar.length ; i++)
-//     {
-//         rnum = Math.floor(Math.random() *n); //난수발생
-//         temp = ar[i];
-//         ar[i] = ar[rnum];
-//         ar[rnum] = temp;
-//     }
-
-//     return ar;
 // }
+const save = [];
+function shuffleRandom(n){
+    var ar = new Array();
+    var temp;
+    var rnum;
+   
+    //전달받은 매개변수 n만큼 배열 생성 ( 1~n )
+    for(var i=1; i<=n; i++){
+        ar.push(i);
+    }
+    //값을 서로 섞기
+    for(var i=0; i< ar.length ; i++)
+    {
+        rnum = Math.floor(Math.random() *n); //난수발생
+        temp = ar[i];
+        ar[i] = ar[rnum];
+        ar[rnum] = temp;
+    }
+    for(let i=0; i< ar.length ; i++)
+    {
+        console.log(artists[ar[i]][6]);
+    }
+
+
+    return ar;
+}
+
     function box(item){
         $(`#overlay`).fadeIn(300);
         if(item === 0 || item){
@@ -98,17 +108,20 @@ const save = [];
             $('.popup_contents').html(artist_contents.join(''));
     };
 $(document).ready(function() {
-    // console.log(shuffleRandom(18))
+    // shuffleRandom(18)
+    // artistsThumnail();
 
     $.each(artists, function(index, item) {
-        // console.log(artists[shuffleRandom(18)[index]][6]);
+
+        // console.log(artists[randomArray[index]][6]);
         artist_main.push(`
-        <div class="box" id="box${item[index]}" onclick="box(${index})" >
-            <div class="Thumbnail_name${item[index]}" id="Thumbnail_name">${item[4]}</div>
+        <div class="box" id="box${index}" onclick="box(${index})" >
+            <div class="Thumbnail_name${index}" id="Thumbnail_name">${item[4]}</div>
             <div id="Thumnail_img">
                 <img src="${item[6]}" />
             </div>
         </div>`);
+        
     });
     
     $('.wrapper').html(artist_main.join(''));

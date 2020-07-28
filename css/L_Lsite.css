@@ -1,21 +1,21 @@
 @font-face { font-family: 'GmarketSansMedium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'GmarketSansBold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff'); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'GmarketSansLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff'); font-weight: normal; font-style: normal; }
-
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); .notosanskr * { font-family: 'Noto Sans KR', sans-serif; }
 body{
     max-width: 1500px;
     margin:0 auto;
     position: relative;
-    font-family: "GmarketSansLight";
+    font-family: "Noto Sans KR";
 }
 /* 텍스트 드래그 방지 */
-p, h1, h2, h3, h4, a{
+/* p, h1, h2, h3, h4, a{
     -ms-user-select: none; 
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-}
+} */
 /* 이미지 드래그 방지. */
 img{
     -webkit-user-select: none;
@@ -37,7 +37,7 @@ img{
 }
 .loading img{
     position: absolute;
-    width: 30%;
+    width: 15%;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
@@ -177,10 +177,17 @@ img{
     clear: both;
     margin-left: 6%;
 }
+#about_text p{
+    line-height: 23px;
+}
 #about_text h1{
+    margin-bottom: -15px;
+    margin-top: 35px;
+    line-height: 38px;
+    font-weight: bold;
     font-size: 30px;
     font-weight: bold;
-    font-family: "";
+    font-family: "Noto Sans KR";
 }
 /* popup */
 .about_popup{
@@ -227,7 +234,7 @@ img{
     height: auto;
 }
 #Thumbnail_name{
-    font-family: "GmarketSansBold";
+    font-family: "Noto Sans KR";
     max-width: 100%;
     width: 24%;
     padding-top: 10.7%;
@@ -327,7 +334,8 @@ text-align: left;}
     font-family: "GmarketSansBold";
 }
 #popup_contact p{
-    margin:0;
+    margin: -1px -135px;
+    text-align: right;
 }
 /* bottom */
 .bottom{
@@ -381,6 +389,9 @@ text-align: left;}
 }
 /* mobile */
 @media (min-width: 280px) and (max-width: 480px) {
+    .loading img{
+        width: 30%;
+    }
      .top{
         position: absolute;
     }
@@ -458,12 +469,13 @@ text-align: left;}
         margin-left:9%;
     }
     #about_text h1{
-        line-height: 26px;
+        line-height: 24px;
         font-size: 18px;
         font-weight: bold;
     }
     #about_text p{
         font-size: 10px;
+        line-height: 15px;
     }
     #about_popup{
         margin-top:20%;
@@ -542,13 +554,14 @@ text-align: left;}
     #popup_left{width: 295px;}
     #popup_main{width: 165px;}
     #popup_aside{width: 165px;}
-    #popup_right{height: 280px;}
+    #popup_right{height: 280px; width: 104px;}
     #popup_info{
         font-size: 17px;
         line-height: 30px;
         margin-top: 17px;
     }
     #popup_info p{
+        width: 210px;
         margin: 0;
     }
     #insta{
@@ -564,7 +577,8 @@ text-align: left;}
         font-size: 10px;
     }
     #popup_contact p{
-        margin:0;
+        margin: 30px -5px;
+        text-align: right;
     }
     /* contact */
     #contact_p{

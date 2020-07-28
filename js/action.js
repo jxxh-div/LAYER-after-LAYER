@@ -105,16 +105,28 @@ $(document).ready(function() {
         scrolling( direction ); // direction 을 인자로 함수 실행
         switch(direction){
             case "#about" :
+                $('#list1').css("color","blue");
+                $('#list2').css("color","#727272");
+                $('#list3').css("color","#727272");
+
                 $('.list1').fadeIn();
                 $('.list2').fadeOut();
                 $('.list3').fadeOut();
             break;
             case "#artists" :
+                $('#list1').css("color","#727272");
+                $('#list2').css("color","blue");
+                $('#list3').css("color","#727272");
+
                 $('.list1').fadeOut();
                 $('.list2').fadeIn();
                 $('.list3').fadeOut();
             break;
             case "#contact" :
+                $('#list1').css("color","#727272");
+                $('#list2').css("color","#727272");
+                $('#list3').css("color","blue");
+
                 $('.list1').fadeOut();
                 $('.list2').fadeOut();
                 $('.list3').fadeIn();
