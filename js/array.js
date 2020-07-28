@@ -82,6 +82,7 @@ function shuffleRandom(n){
 
     function box(item){
         $(`#overlay`).fadeIn(300);
+        $('#main_sticker').css("z-index","0")
         if(item === 0 || item){
             artist_contents.push(`<div id="popup_contents">`);
                 artist_contents.push(`<img id="popup_left"  src="${artists[item][0]}" />`);
@@ -127,6 +128,7 @@ $(document).ready(function() {
     $('.wrapper').html(artist_main.join(''));
 
     $('#overlay').click(function() {
+        $('#main_sticker').css("z-index","8")
         $('#overlay').fadeOut(300);
         artist_contents.length = 0;
         artist_info.length = 0;
@@ -134,6 +136,7 @@ $(document).ready(function() {
     });
 
     $('#close').click(function() {
+        $('#main_sticker').css("z-index","8")
         $('#overlay').fadeOut(300);
         artist_contents.length = 0;
         artist_info.length = 0;

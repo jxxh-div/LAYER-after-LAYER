@@ -86,16 +86,18 @@ const mobileMenu = () =>{
 // });
 
 // }
+
+
+
 $(document).ready(function() {
     mobileMenu();
     // scrollMenu();
-
     $(".loading").click(function(){
         $(this).animate({
             marginLeft:"100%",
           }, 500);
     })
-
+    
     let $img = $("#banner_in div");
     let $first;
     let $last;
@@ -105,31 +107,34 @@ $(document).ready(function() {
         scrolling( direction ); // direction 을 인자로 함수 실행
         switch(direction){
             case "#about" :
-                $('#list1').css("color","blue");
-                $('#list2').css("color","#727272");
-                $('#list3').css("color","#727272");
-
-                $('.list1').fadeIn();
-                $('.list2').fadeOut();
-                $('.list3').fadeOut();
+                if(!isMobile()){
+                    $('#list1').css("color","blue");
+                    $('#list2').css("color","#727272");
+                    $('#list3').css("color","#727272");
+                }
+                    $('.list1').fadeIn();
+                    $('.list2').fadeOut();
+                    $('.list3').fadeOut();
             break;
             case "#artists" :
-                $('#list1').css("color","#727272");
-                $('#list2').css("color","blue");
-                $('#list3').css("color","#727272");
-
-                $('.list1').fadeOut();
-                $('.list2').fadeIn();
-                $('.list3').fadeOut();
+                if(!isMobile()){
+                    $('#list1').css("color","#727272");
+                    $('#list2').css("color","blue");
+                    $('#list3').css("color","#727272");
+                }
+                    $('.list1').fadeOut();
+                    $('.list2').fadeIn();
+                    $('.list3').fadeOut();
             break;
             case "#contact" :
-                $('#list1').css("color","#727272");
-                $('#list2').css("color","#727272");
-                $('#list3').css("color","blue");
-
-                $('.list1').fadeOut();
-                $('.list2').fadeOut();
-                $('.list3').fadeIn();
+                if(!isMobile()){
+                    $('#list1').css("color","#727272");
+                    $('#list2').css("color","#727272");
+                    $('#list3').css("color","blue");
+                }
+                    $('.list1').fadeOut();
+                    $('.list2').fadeOut();
+                    $('.list3').fadeIn();
             break;
         }
         return false;   // 본래 이벤트 방지
@@ -171,4 +176,7 @@ function scrolling(obj){
         var posTop = $(obj).offset().top;   // posTop = 매개변수로 들어온 컨텐츠 obj 의 offset().top - 네비게이션 높이
         $('html, body').animate({scrollTop:posTop}, speed ) // body의 스크롤이동 : posTop
     }
+};
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 };
