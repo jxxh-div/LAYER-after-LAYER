@@ -394,6 +394,12 @@ text-align: left;}
         width: 100%;
         padding:35px;
     }
+    #Thumbnail_name{
+        opacity: 0;
+    }
+    #main_sticker{
+        width: 20%;
+    }
 }
 /* mobile */
 @media (min-width: 280px) and (max-width: 480px) {
@@ -498,6 +504,7 @@ text-align: left;}
     /* artist */
     #artists{
         margin: 0;
+        margin-bottom: 10%;
         /* margin-bottom: %; */
     }
     #artist_icon{

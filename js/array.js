@@ -13,7 +13,7 @@ let root = "./img/artist/"
 const artists = [
     [`${root}The71_01.png`,"./img/artist/The71_02.png","./img/artist/The71_03.png","./img/artist/The71_04.png","THE71_<br> 더기","dkbeam@naver.com","./img/Thumnail/THE71_Thumnail.png","https://www.instagram.com/the71_","https://twitter.com/the71__","THE71"],
     //더기
-    ["./img/artist/GEETRUO_O_01.png","./img/artist/GEETRUO_O_02.png","./img/artist/GEETRUO_O_03.png","./img/artist/GEETRUO_O_04.png","GEETRUO_O<br>지트루","GEETRUO_O@naver.com","./img/Thumnail/Thumnail_geetruo_o.png","www.instagram.com/geetruo_o","https://twitter.com/geetruo","GEETRUO_O"],
+    ["./img/artist/GEETRUO_O_01.png","./img/artist/GEETRUO_O_02.png","./img/artist/GEETRUO_O_03.png","./img/artist/GEETRUO_O_04.png","GEETRUO_O<br>지트루","GEETRUO_O@naver.com","./img/Thumnail/Thumnail_geetruo_o.png","https://instagram.com/geetruo_o","https://twitter.com/geetruo","GEETRUO_O"],
     //지트루
     [`${root}heezey_01.png`,`${root}heezey_02.png`,`${root}heezey_03.png`,`${root}heezey_04.png`,"HEEZEY<br>히지","heezey.bae@gmail.com","./img/Thumnail/Thumnail_HEEZEY.png","https://www.instagram.com/xheezeyx","https://twitter.com/kawaiiheezey","HEEZEY"],
     //히지
@@ -82,7 +82,8 @@ function shuffleRandom(n){
 
     function box(item){
         $(`#overlay`).fadeIn(300);
-        $('#main_sticker').css("z-index","0")
+        stopDrag(true);
+        $('#main_sticker').css("z-index","1")
         if(item === 0 || item){
             artist_contents.push(`<div id="popup_contents">`);
                 artist_contents.push(`<img id="popup_left"  src="${artists[item][0]}" />`);
@@ -124,10 +125,11 @@ $(document).ready(function() {
         </div>`);
         
     });
-    
+
     $('.wrapper').html(artist_main.join(''));
 
     $('#overlay').click(function() {
+        stopDrag(false);
         $('#main_sticker').css("z-index","8")
         $('#overlay').fadeOut(300);
         artist_contents.length = 0;
@@ -136,7 +138,8 @@ $(document).ready(function() {
     });
 
     $('#close').click(function() {
-        $('#main_sticker').css("z-index","1")
+        stopDrag(false);
+        $('#main_sticker').css("z-index","8")
         $('#overlay').fadeOut(300);
         artist_contents.length = 0;
         artist_info.length = 0;
@@ -156,5 +159,12 @@ $(document).ready(function() {
         });
     }
 });
-
+let stopDrag = function(stop){
+    if(stop){
+        $('html, body').css({'overflow': 'hidden', 'height': '100%'});
+        
+    } else {
+        $('html, body').css({'overflow': 'auto', 'height': '100%'}); //scroll hidden 해제
+    }
+};
 
