@@ -97,7 +97,6 @@ $(document).ready(function() {
             marginLeft:"100%",
           }, 500);
     })
-    
     let $img = $("#banner_in div");
     let $first;
     let $last;
@@ -179,4 +178,7 @@ function scrolling(obj){
 };
 function isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+};
+let dragAction = function(){
+ $("#main_sticker").draggable();
 };

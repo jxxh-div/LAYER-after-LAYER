@@ -136,7 +136,7 @@ $(document).ready(function() {
     });
 
     $('#close').click(function() {
-        $('#main_sticker').css("z-index","8")
+        $('#main_sticker').css("z-index","1")
         $('#overlay').fadeOut(300);
         artist_contents.length = 0;
         artist_info.length = 0;
